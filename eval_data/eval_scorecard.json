@@ -1,0 +1,127 @@
+{
+  "aggregate_metrics": {
+    "n_cases": 6,
+    "outcome_accuracy": 1.0,
+    "tool_precision": 1.0,
+    "tool_recall": 1.0,
+    "trajectory_exact_match_rate": 1.0
+  },
+  "regression_gate": {
+    "outcome_accuracy": {
+      "value": 1.0,
+      "floor": 0.85,
+      "pass": true
+    },
+    "tool_recall": {
+      "value": 1.0,
+      "floor": 0.85,
+      "pass": true
+    },
+    "tool_precision": {
+      "value": 1.0,
+      "floor": 0.85,
+      "pass": true
+    }
+  },
+  "gate_pass": true,
+  "case_results": [
+    {
+      "case_id": "clean_strong_approve",
+      "vendor": "ClearPath Analytics",
+      "expected_recommendation": "APPROVE",
+      "actual_recommendation": "APPROVE",
+      "outcome_correct": true,
+      "expected_tool_calls": [],
+      "actual_tool_calls": [],
+      "tool_precision": 1.0,
+      "tool_recall": 1.0,
+      "trajectory_exact_match": true,
+      "notes": "Clean profile across every metric; no flags expected."
+    },
+    {
+      "case_id": "compliance_breach_decline",
+      "vendor": "Ironview Trading",
+      "expected_recommendation": "DECLINE / ESCALATE",
+      "actual_recommendation": "DECLINE / ESCALATE",
+      "outcome_correct": true,
+      "expected_tool_calls": [
+        "flag_compliance"
+      ],
+      "actual_tool_calls": [
+        "flag_compliance"
+      ],
+      "tool_precision": 1.0,
+      "tool_recall": 1.0,
+      "trajectory_exact_match": true,
+      "notes": "4 compliance flags alone should drive a decline + flag."
+    },
+    {
+      "case_id": "sla_breach_flag",
+      "vendor": "Vantor Securities",
+      "expected_recommendation": "DECLINE / ESCALATE",
+      "actual_recommendation": "DECLINE / ESCALATE",
+      "outcome_correct": true,
+      "expected_tool_calls": [
+        "flag_sla"
+      ],
+      "actual_tool_calls": [
+        "flag_sla"
+      ],
+      "tool_precision": 1.0,
+      "tool_recall": 1.0,
+      "trajectory_exact_match": true,
+      "notes": "SLA breach rate 12% > 8% threshold should be flagged."
+    },
+    {
+      "case_id": "poor_data_quality_flag",
+      "vendor": "Harrowgate Execution",
+      "expected_recommendation": "DECLINE / ESCALATE",
+      "actual_recommendation": "DECLINE / ESCALATE",
+      "outcome_correct": true,
+      "expected_tool_calls": [
+        "flag_data_quality"
+      ],
+      "actual_tool_calls": [
+        "flag_data_quality"
+      ],
+      "tool_precision": 1.0,
+      "tool_recall": 1.0,
+      "trajectory_exact_match": true,
+      "notes": "Data quality 42 < 60 floor should be flagged."
+    },
+    {
+      "case_id": "multi_flag_worst_case",
+      "vendor": "Baskerville Markets",
+      "expected_recommendation": "DECLINE / ESCALATE",
+      "actual_recommendation": "DECLINE / ESCALATE",
+      "outcome_correct": true,
+      "expected_tool_calls": [
+        "flag_compliance",
+        "flag_sla",
+        "flag_data_quality"
+      ],
+      "actual_tool_calls": [
+        "flag_compliance",
+        "flag_sla",
+        "flag_data_quality"
+      ],
+      "tool_precision": 1.0,
+      "tool_recall": 1.0,
+      "trajectory_exact_match": true,
+      "notes": "Worst-case vendor: all three flags should fire together."
+    },
+    {
+      "case_id": "borderline_moderate",
+      "vendor": "Fenwick Liquidity Partners",
+      "expected_recommendation": "APPROVE",
+      "actual_recommendation": "APPROVE",
+      "outcome_correct": true,
+      "expected_tool_calls": [],
+      "actual_tool_calls": [],
+      "tool_precision": 1.0,
+      "tool_recall": 1.0,
+      "trajectory_exact_match": true,
+      "notes": "Below all flag thresholds; should pass despite 1 historical flag."
+    }
+  ]
+}

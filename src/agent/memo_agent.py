@@ -34,18 +34,46 @@ class MemoResult:
     confidence: float
     drivers: list
     flags: list
+    tool_calls: list
     memo: str
 
 
-def _flag_row(row: pd.Series) -> list:
-    flags = []
+def flag_compliance(row: pd.Series):
     if row["compliance_flags_12m"] > 2:
-        flags.append(f"{int(row['compliance_flags_12m'])} compliance flags in last 12m (elevated)")
+        return f"{int(row['compliance_flags_12m'])} compliance flags in last 12m (elevated)"
+    return None
+
+
+def flag_sla(row: pd.Series):
     if row["sla_breach_rate"] > 0.08:
-        flags.append(f"SLA breach rate {row['sla_breach_rate']:.1%} above 8% threshold")
+        return f"SLA breach rate {row['sla_breach_rate']:.1%} above 8% threshold"
+    return None
+
+
+def flag_data_quality(row: pd.Series):
     if row["data_quality_score"] < 60:
-        flags.append(f"Data quality score {row['data_quality_score']:.0f}/100 below acceptable floor")
-    return flags
+        return f"Data quality score {row['data_quality_score']:.0f}/100 below acceptable floor"
+    return None
+
+
+# Explicit registry so the eval harness can score "tool selection"
+# precision/recall the same way Dataiku's trajectory metrics do.
+FLAG_TOOLS = {
+    "flag_compliance": flag_compliance,
+    "flag_sla": flag_sla,
+    "flag_data_quality": flag_data_quality,
+}
+
+
+def _flag_row(row: pd.Series) -> tuple:
+    """Returns (flag_messages, tool_calls_fired) for a row."""
+    messages, tool_calls = [], []
+    for tool_name, tool_fn in FLAG_TOOLS.items():
+        msg = tool_fn(row)
+        if msg:
+            messages.append(msg)
+            tool_calls.append(tool_name)
+    return messages, tool_calls
 
 
 def _top_drivers_for_row(row: pd.Series, importance_df: pd.DataFrame, k: int = 3) -> list:
@@ -61,10 +89,17 @@ def _top_drivers_for_row(row: pd.Series, importance_df: pd.DataFrame, k: int = 3
 
 
 def render_memo(row: pd.Series, importance_df: pd.DataFrame) -> MemoResult:
-    rec = "APPROVE" if row["pred_approved"] == 1 else "DECLINE / ESCALATE"
-    conf = float(row["approval_probability"] if row["pred_approved"] == 1
+    model_approved = row["pred_approved"] == 1
+    conf = float(row["approval_probability"] if model_approved
                   else 1 - row["approval_probability"])
-    flags = _flag_row(row)
+    flags, tool_calls = _flag_row(row)
+
+    # Governance rule: a deterministic risk flag always overrides the
+    # model's recommendation toward escalation. A model should never be
+    # able to silently approve a vendor that trips a hard risk rule —
+    # this coupling is exactly what the eval harness (src/eval/) checks
+    # on every run via the golden set.
+    rec = "DECLINE / ESCALATE" if flags else ("APPROVE" if model_approved else "DECLINE / ESCALATE")
     drivers = _top_drivers_for_row(row, importance_df)
 
     driver_text = "; ".join(f"{name} = {val}" for name, _, val in drivers)
@@ -84,8 +119,24 @@ def render_memo(row: pd.Series, importance_df: pd.DataFrame) -> MemoResult:
         vendor=row["vendor"], asset_class=row["asset_class"], region=row["region"],
         recommendation=rec, confidence=round(conf, 4),
         drivers=[{"feature": n, "value": v} for n, _, v in drivers],
-        flags=flags, memo=memo,
+        flags=flags, tool_calls=tool_calls, memo=memo,
     )
+
+
+def score_and_render(row: pd.Series, model, importance_df: pd.DataFrame) -> MemoResult:
+    """
+    Entry point for rows that do NOT already have pred_approved /
+    approval_probability columns (e.g. golden eval cases) — runs the
+    saved model then renders the memo. Used by the eval harness so it
+    exercises the real model + real agent logic, not a mock.
+    """
+    from src.pipeline.train_model import CAT_COLS, NUM_COLS
+
+    row = row.copy()
+    X = pd.DataFrame([row[NUM_COLS + CAT_COLS]])
+    row["pred_approved"] = int(model.predict(X)[0])
+    row["approval_probability"] = float(model.predict_proba(X)[0, 1])
+    return render_memo(row, importance_df)
 
 
 def _audit(entry: dict):

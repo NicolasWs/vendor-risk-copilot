@@ -10,6 +10,7 @@ Produces:
 """
 import json
 
+import joblib
 import numpy as np
 import pandas as pd
 from sklearn.compose import ColumnTransformer
@@ -92,7 +93,8 @@ def main():
     with open("data/metrics.json", "w") as f:
         json.dump(metrics, f, indent=2)
 
-    print(f"\nWrote data/scored_mandates.csv ({len(df)} rows) and data/feature_importances.csv")
+    joblib.dump(pipe, "data/model.joblib")
+    print(f"\nWrote data/scored_mandates.csv ({len(df)} rows), data/feature_importances.csv, data/model.joblib")
 
 
 if __name__ == "__main__":
