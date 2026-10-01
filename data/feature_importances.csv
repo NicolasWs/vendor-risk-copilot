@@ -1,0 +1,29 @@
+feature,importance
+compliance_flags_12m,0.30715721976468596
+data_quality_score,0.15587884999061333
+fill_rate,0.10843067934254273
+cost_bps,0.10662823119635306
+coverage_pct,0.08390552777428949
+latency_ms,0.0687046321578643
+sla_breach_rate,0.05448491036064481
+relationship_years,0.04699103024342437
+region_EMEA,0.006257047808621574
+region_APAC,0.005944680733315134
+asset_class_Commodities,0.004650231218860356
+asset_class_Equities,0.004344369168810037
+asset_class_Derivatives,0.00425674134902424
+asset_class_Fixed Income,0.004225447689101367
+asset_class_FX,0.003993890076375444
+vendor_Askew & Pryce,0.003832997296458686
+region_Americas,0.0037656683410044745
+vendor_Harrowgate Execution,0.003707377335284606
+vendor_Ironview Trading,0.002935251438549139
+vendor_Quillon Data,0.0028032471792415743
+vendor_Oberon Risk Analytics,0.0026113412024959004
+vendor_Fenwick Liquidity Partners,0.0026103377563569
+vendor_Meridian Capital Markets,0.002479232421222014
+vendor_Solace Prime Brokerage,0.002377196571357926
+vendor_Northfield Data Services,0.0022056805335781667
+vendor_Vantor Securities,0.0019892523655077893
+vendor_ClearPath Analytics,0.0016412406069532407
+vendor_Baskerville Markets,0.0011876880774634375

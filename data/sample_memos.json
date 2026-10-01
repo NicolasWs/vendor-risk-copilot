@@ -1,0 +1,480 @@
+[
+  {
+    "vendor": "Baskerville Markets",
+    "asset_class": "Derivatives",
+    "region": "APAC",
+    "recommendation": "DECLINE / ESCALATE",
+    "confidence": 0.9565,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 2
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 65.7
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.8944
+      }
+    ],
+    "flags": [
+      "SLA breach rate 9.5% above 8% threshold"
+    ],
+    "memo": "Recommendation: DECLINE / ESCALATE (96% model confidence) for Baskerville Markets on Derivatives mandates, APAC region. Key drivers: compliance_flags_12m = 2; data_quality_score = 65.7; fill_rate = 0.8944. Risk flags: SLA breach rate 9.5% above 8% threshold. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "ClearPath Analytics",
+    "asset_class": "FX",
+    "region": "Americas",
+    "recommendation": "APPROVE",
+    "confidence": 0.9813,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 0
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 100.0
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.9325
+      }
+    ],
+    "flags": [],
+    "memo": "Recommendation: APPROVE (98% model confidence) for ClearPath Analytics on FX mandates, Americas region. Key drivers: compliance_flags_12m = 0; data_quality_score = 100.0; fill_rate = 0.9325. No material risk flags raised. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Vantor Securities",
+    "asset_class": "Derivatives",
+    "region": "EMEA",
+    "recommendation": "DECLINE / ESCALATE",
+    "confidence": 0.8659,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 4
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 62.5
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.9783
+      }
+    ],
+    "flags": [
+      "4 compliance flags in last 12m (elevated)"
+    ],
+    "memo": "Recommendation: DECLINE / ESCALATE (87% model confidence) for Vantor Securities on Derivatives mandates, EMEA region. Key drivers: compliance_flags_12m = 4; data_quality_score = 62.5; fill_rate = 0.9783. Risk flags: 4 compliance flags in last 12m (elevated). This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Askew & Pryce",
+    "asset_class": "FX",
+    "region": "APAC",
+    "recommendation": "DECLINE / ESCALATE",
+    "confidence": 0.8612,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 1
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 70.5
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.908
+      }
+    ],
+    "flags": [],
+    "memo": "Recommendation: DECLINE / ESCALATE (86% model confidence) for Askew & Pryce on FX mandates, APAC region. Key drivers: compliance_flags_12m = 1; data_quality_score = 70.5; fill_rate = 0.908. No material risk flags raised. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Ironview Trading",
+    "asset_class": "Fixed Income",
+    "region": "EMEA",
+    "recommendation": "DECLINE / ESCALATE",
+    "confidence": 0.9549,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 3
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 59.1
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.8855
+      }
+    ],
+    "flags": [
+      "3 compliance flags in last 12m (elevated)",
+      "Data quality score 59/100 below acceptable floor"
+    ],
+    "memo": "Recommendation: DECLINE / ESCALATE (95% model confidence) for Ironview Trading on Fixed Income mandates, EMEA region. Key drivers: compliance_flags_12m = 3; data_quality_score = 59.1; fill_rate = 0.8855. Risk flags: 3 compliance flags in last 12m (elevated); Data quality score 59/100 below acceptable floor. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Solace Prime Brokerage",
+    "asset_class": "Fixed Income",
+    "region": "APAC",
+    "recommendation": "APPROVE",
+    "confidence": 0.9807,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 0
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 88.9
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.9763
+      }
+    ],
+    "flags": [],
+    "memo": "Recommendation: APPROVE (98% model confidence) for Solace Prime Brokerage on Fixed Income mandates, APAC region. Key drivers: compliance_flags_12m = 0; data_quality_score = 88.9; fill_rate = 0.9763. No material risk flags raised. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Harrowgate Execution",
+    "asset_class": "Commodities",
+    "region": "EMEA",
+    "recommendation": "DECLINE / ESCALATE",
+    "confidence": 0.8886,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 1
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 66.3
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.9305
+      }
+    ],
+    "flags": [
+      "SLA breach rate 8.2% above 8% threshold"
+    ],
+    "memo": "Recommendation: DECLINE / ESCALATE (89% model confidence) for Harrowgate Execution on Commodities mandates, EMEA region. Key drivers: compliance_flags_12m = 1; data_quality_score = 66.3; fill_rate = 0.9305. Risk flags: SLA breach rate 8.2% above 8% threshold. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Northfield Data Services",
+    "asset_class": "FX",
+    "region": "EMEA",
+    "recommendation": "DECLINE / ESCALATE",
+    "confidence": 0.9182,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 2
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 76.8
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.9159
+      }
+    ],
+    "flags": [],
+    "memo": "Recommendation: DECLINE / ESCALATE (92% model confidence) for Northfield Data Services on FX mandates, EMEA region. Key drivers: compliance_flags_12m = 2; data_quality_score = 76.8; fill_rate = 0.9159. No material risk flags raised. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Askew & Pryce",
+    "asset_class": "Fixed Income",
+    "region": "Americas",
+    "recommendation": "DECLINE / ESCALATE",
+    "confidence": 0.9313,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 2
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 71.2
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.8951
+      }
+    ],
+    "flags": [
+      "SLA breach rate 10.5% above 8% threshold"
+    ],
+    "memo": "Recommendation: DECLINE / ESCALATE (93% model confidence) for Askew & Pryce on Fixed Income mandates, Americas region. Key drivers: compliance_flags_12m = 2; data_quality_score = 71.2; fill_rate = 0.8951. Risk flags: SLA breach rate 10.5% above 8% threshold. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Northfield Data Services",
+    "asset_class": "FX",
+    "region": "Americas",
+    "recommendation": "APPROVE",
+    "confidence": 0.8578,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 0
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 94.7
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.9941
+      }
+    ],
+    "flags": [],
+    "memo": "Recommendation: APPROVE (86% model confidence) for Northfield Data Services on FX mandates, Americas region. Key drivers: compliance_flags_12m = 0; data_quality_score = 94.7; fill_rate = 0.9941. No material risk flags raised. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Harrowgate Execution",
+    "asset_class": "FX",
+    "region": "EMEA",
+    "recommendation": "DECLINE / ESCALATE",
+    "confidence": 0.8861,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 2
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 83.6
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.9626
+      }
+    ],
+    "flags": [],
+    "memo": "Recommendation: DECLINE / ESCALATE (89% model confidence) for Harrowgate Execution on FX mandates, EMEA region. Key drivers: compliance_flags_12m = 2; data_quality_score = 83.6; fill_rate = 0.9626. No material risk flags raised. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Fenwick Liquidity Partners",
+    "asset_class": "Fixed Income",
+    "region": "EMEA",
+    "recommendation": "APPROVE",
+    "confidence": 0.9044,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 0
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 95.8
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.9641
+      }
+    ],
+    "flags": [],
+    "memo": "Recommendation: APPROVE (90% model confidence) for Fenwick Liquidity Partners on Fixed Income mandates, EMEA region. Key drivers: compliance_flags_12m = 0; data_quality_score = 95.8; fill_rate = 0.9641. No material risk flags raised. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Harrowgate Execution",
+    "asset_class": "FX",
+    "region": "APAC",
+    "recommendation": "APPROVE",
+    "confidence": 0.9747,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 0
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 80.0
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.954
+      }
+    ],
+    "flags": [],
+    "memo": "Recommendation: APPROVE (97% model confidence) for Harrowgate Execution on FX mandates, APAC region. Key drivers: compliance_flags_12m = 0; data_quality_score = 80.0; fill_rate = 0.954. No material risk flags raised. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Ironview Trading",
+    "asset_class": "Commodities",
+    "region": "Americas",
+    "recommendation": "APPROVE",
+    "confidence": 0.9675,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 0
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 94.8
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.9261
+      }
+    ],
+    "flags": [],
+    "memo": "Recommendation: APPROVE (97% model confidence) for Ironview Trading on Commodities mandates, Americas region. Key drivers: compliance_flags_12m = 0; data_quality_score = 94.8; fill_rate = 0.9261. No material risk flags raised. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Quillon Data",
+    "asset_class": "FX",
+    "region": "APAC",
+    "recommendation": "APPROVE",
+    "confidence": 0.8365,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 1
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 90.3
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.9588
+      }
+    ],
+    "flags": [],
+    "memo": "Recommendation: APPROVE (84% model confidence) for Quillon Data on FX mandates, APAC region. Key drivers: compliance_flags_12m = 1; data_quality_score = 90.3; fill_rate = 0.9588. No material risk flags raised. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Fenwick Liquidity Partners",
+    "asset_class": "Fixed Income",
+    "region": "APAC",
+    "recommendation": "DECLINE / ESCALATE",
+    "confidence": 0.9767,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 6
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 73.9
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.8416
+      }
+    ],
+    "flags": [
+      "6 compliance flags in last 12m (elevated)"
+    ],
+    "memo": "Recommendation: DECLINE / ESCALATE (98% model confidence) for Fenwick Liquidity Partners on Fixed Income mandates, APAC region. Key drivers: compliance_flags_12m = 6; data_quality_score = 73.9; fill_rate = 0.8416. Risk flags: 6 compliance flags in last 12m (elevated). This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "ClearPath Analytics",
+    "asset_class": "Derivatives",
+    "region": "APAC",
+    "recommendation": "DECLINE / ESCALATE",
+    "confidence": 0.8802,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 3
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 46.2
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.9177
+      }
+    ],
+    "flags": [
+      "3 compliance flags in last 12m (elevated)",
+      "Data quality score 46/100 below acceptable floor"
+    ],
+    "memo": "Recommendation: DECLINE / ESCALATE (88% model confidence) for ClearPath Analytics on Derivatives mandates, APAC region. Key drivers: compliance_flags_12m = 3; data_quality_score = 46.2; fill_rate = 0.9177. Risk flags: 3 compliance flags in last 12m (elevated); Data quality score 46/100 below acceptable floor. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Solace Prime Brokerage",
+    "asset_class": "Fixed Income",
+    "region": "APAC",
+    "recommendation": "DECLINE / ESCALATE",
+    "confidence": 0.7447,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 3
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 74.3
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.8923
+      }
+    ],
+    "flags": [
+      "3 compliance flags in last 12m (elevated)"
+    ],
+    "memo": "Recommendation: DECLINE / ESCALATE (74% model confidence) for Solace Prime Brokerage on Fixed Income mandates, APAC region. Key drivers: compliance_flags_12m = 3; data_quality_score = 74.3; fill_rate = 0.8923. Risk flags: 3 compliance flags in last 12m (elevated). This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "Harrowgate Execution",
+    "asset_class": "Fixed Income",
+    "region": "EMEA",
+    "recommendation": "APPROVE",
+    "confidence": 0.8831,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 0
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 89.4
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.9624
+      }
+    ],
+    "flags": [],
+    "memo": "Recommendation: APPROVE (88% model confidence) for Harrowgate Execution on Fixed Income mandates, EMEA region. Key drivers: compliance_flags_12m = 0; data_quality_score = 89.4; fill_rate = 0.9624. No material risk flags raised. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  },
+  {
+    "vendor": "ClearPath Analytics",
+    "asset_class": "Fixed Income",
+    "region": "Americas",
+    "recommendation": "APPROVE",
+    "confidence": 0.9694,
+    "drivers": [
+      {
+        "feature": "compliance_flags_12m",
+        "value": 0
+      },
+      {
+        "feature": "data_quality_score",
+        "value": 78.9
+      },
+      {
+        "feature": "fill_rate",
+        "value": 0.9631
+      }
+    ],
+    "flags": [],
+    "memo": "Recommendation: APPROVE (97% model confidence) for ClearPath Analytics on Fixed Income mandates, Americas region. Key drivers: compliance_flags_12m = 0; data_quality_score = 78.9; fill_rate = 0.9631. No material risk flags raised. This assessment is model-generated from historical vendor performance data and should be reviewed by the trading-ops committee before final sign-off."
+  }
+]
