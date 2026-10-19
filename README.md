@@ -3,9 +3,7 @@
 **A governed AI agent that recommends, explains, and audits broker /
 data-vendor selection decisions for capital-markets trading desks.**
 
-Built by Nicolas Wajs — Product Manager with 15+ years in financial
-markets, trading-tech, and data/AI platforms (Finastra, Opensee,
-Natixis). This project reproduces, on fully synthetic data, the shape
+ This project reproduces, on fully synthetic data, the shape
 of a real broker & data-provider selection engagement delivered for a
 French asset manager in 2026.
 
